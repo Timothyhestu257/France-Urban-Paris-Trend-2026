@@ -9,6 +9,8 @@ body, html {
     height: 100%;
 }
 
+
+/*================== Ini background ==============*/
 .landing-page {
     position: relative;
     width: 100%;
@@ -22,29 +24,39 @@ body, html {
     color: white;
 }
 
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: black;
-    opacity: 70%;
+/*================== Ini bagian navbar ==============*/
+.navbar {
+  position: fixed;
+  top: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: black;
+  opacity: 70%;
+  color: #f1f1f1;
 }
 
-.home-icon {
-    position: absolute;
-    left: 40px;
-    font-size: 37px;
+.nav {
+  display: flex;
+  gap: 20px;
+  margin-right: 60px;
+
 }
 
-.home-icon:hover {
-    color: white;
-    text-decoration: underline;
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 .logo {
@@ -53,7 +65,7 @@ header {
     letter-spacing: 2px;
 }
 
-/* Konten Tengah */
+/*================== Ini bagian konten tengah ==============*/
 main {
     flex: 1;
     display: flex;
@@ -73,7 +85,7 @@ main {
     opacity: 0.8;
 }
 
-/* Tombol Explore */
+/*================== Ini bagian tombol ==============*/
 .explore-btn {
     display: inline-block;
     padding: 10px 30px;
@@ -192,4 +204,35 @@ h4 {
     font-style: italic;
     opacity: 60%;
     font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+        margin-right: 0;
+}
+
+    * {
+        font-size: small;
+}
+    .lab-email {
+    margin-left: 3px;
+}
+
+.lab-email_name {
+    margin-left: 3px;
+}
+
+.lab-email_tlp {
+    margin-left: 3px
+}
+
+.lab-password {
+    margin-right: 15px;
+}
+
+input {
+    max-width: 60%;
+}
+
+
 }

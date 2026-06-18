@@ -7,38 +7,47 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <div class="landing-page">
-      <header>
+
+     <!-- Ini navbar -->
+      <navbar class="navbar">
         <div class="logo">Urbané</div>
-      </header>
+
+        <div class="nav">
+          <a href="/AboutUs/aboutus.html">About Us</a>
+        </div>
+      </navbar>
+
       <main>
         <div class="content">
+
           <div class="year">2026</div>
-          <h1>PARIS FASHION<br />TREND</h1>
+            <h1>PARIS FASHION<br/>TREND</h1>
+
+         <!-- Ini bagian form -->
           <div id="auth-container">
             <div id="div-login" class="form-container">
+
               <form class="input">
                 <h2>LogIn</h2>
                 <label class="lab-email" for="">Email:</label>
-                <input class="email" type="text" placeholder /><br />
+                 <input class="email" type="text" placeholder /><br />
                 <label class="lab-password" for="">Password:</label>
-                <input class="password" type="password" /><br />
+                 <input class="password" type="password" /><br />
               </form>
+
               <a href="/Page 2/page2.html" class="explore-btn">Log In</a>
+
               <p>don't have an account yet?</p>
-              <a
-                href="#"
-                class="explore-btn2"
-                onclick="
-                  event.preventDefault();
-                  renderRegisterForm();
-                "
-                >Create Account</a
-              >
+              <a href="#" class="explore-btn2" onclick="event.preventDefault(); renderRegisterForm();">Create Account</a>
+
             </div>
           </div>
+
         </div>
       </main>
+
     </div>
     <script src="script.js"></script>
   </body>

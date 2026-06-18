@@ -1,71 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>France-Webdas</title>
-    <link rel="stylesheet" href="style2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>France-Webdas</title>
+
+  <!-- ini koneksi cssnya -->
+  <link rel="stylesheet" href="style2.css">
 </head>
+
+
+
 <body>
-    <div class="page-container">
 
-        <header class="header">
-            <p class="header-intro-text">
-                Find your signature style with collections influenced by the fashion capital of the world.
-            </p>
-            <h1 class="header-title">EXPLORE YOUR STYLE</h1>
-        </header>
-
-    
-        <div class="slider-wrapper">
-            <main class="gallery-container">
-
-                <a href="/Page 3/page3.html" class="style-card">
-                    <div class="card-image">
-                        <img src="haute.png" alt="">
-                    </div>
-                    <h2 class="card-label">HAUTE COUTURE</h2>
-                </a>
-
-                <a href="/Page 4/page4.html" class="style-card">
-                    <div class="card-image">
-                        <img src="street.png" alt="">
-                    </div>
-                    <h2 class="card-label">PARIS STREETWEAR</h2>
-                </a>
-
-                <a href="/Page 5/page5.html" class="style-card">
-                    <div class="card-image">
-                        <img src="bohemian.png" alt="">
-                    </div>
-                    <h2 class="card-label">BOHEMIAN PARIS STYLE</h2>
-                </a>
-
-                <!-- copy untuk looping -->
-                <a href="/Page 3/page3.html 3" class="style-card">
-                    <div class="card-image">
-                        <img src="haute.png" alt="">
-                    </div>
-                    <h2 class="card-label">HAUTE COUTURE</h2>
-                </a>
-
-                <a href="/Page 4/page4.html" class="style-card">
-                    <div class="card-image">
-                        <img src="street.png" alt="">
-                    </div>
-                    <h2 class="card-label">PARIS STREETWEAR</h2>
-                </a>
-
-                <a href="/Page 5/page5.html" class="style-card">
-                    <div class="card-image">
-                        <img src="bohemian.png" alt="">
-                    </div>
-                    <h2 class="card-label">BOHEMIAN PARIS STYLE</h2>
-                </a>
-
-
-            </main>
-        </div>
+<!-- ini bagian navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/Page 1/page1.html">Urbané</a>
     </div>
+
+    <div class="nav">
+      <a href="/AboutUs/aboutus.html">About Us</a>
+    </div>
+    <button id="backToTop">⌃</button>
+  </nav>
+
+<!-- ini bagian main display yang ada sesudah navbar -->
+  <div class="hero">
+
+    <img src="background.png" alt="" class="gambar">
+
+<!-- ini bagian dropdown menu untuk tampilan mobile -->
+    <div class="page-container">
+      <div class="filter-container">
+        <select id="styleFilter">
+            <option value="all"></option>
+            <option value="haute">Haute Couture</option>
+            <option value="street">Paris Streetwear</option>
+            <option value="bohemian">Bohemian Paris Style</option>
+        </select>
+      </div>
+
+
+<header class="header">
+
+      <header class="header">
+        <p class="header-intro-text">
+          Find your signature style with collections influenced by the fashion
+          capital of the world.
+        </p>
+
+        <h1 class="header-title">
+          EXPLORE YOUR STYLE
+        </h1>
+      </header>
+
+<!-- ini bagian slide gambar -->
+      <div class="slider-wrapper">
+
+        <main class="gallery-container">
+
+        <!-- ini bagian card gambarnya -->
+          <a href="/Page 3/page3.html" class="style-card" id="haute">
+            <div class="card-image">
+              <img src="haute.png" alt="">
+            </div>
+            <h2 class="card-label">HAUTE COUTURE</h2>
+          </a>
+
+          <a href="/Page 4/page4.html" class="style-card" id="street">
+            <div class="card-image">
+              <img src="street.png" alt="">
+            </div>
+            <h2 class="card-label">PARIS STREETWEAR</h2>
+          </a>
+
+          <a href="/Page 5/page5.html" class="style-card" id="bohemian">
+            <div class="card-image">
+              <img src="bohemian.png" alt="">
+            </div>
+            <h2 class="card-label">BOHEMIAN PARIS STYLE</h2>
+          </a>
+
+
+        <!-- Duplicate untuk bisa scroll kesamping terus -->
+          <a href="/Page 3/page3.html" class="style-card duplicate"  >
+            <div class="card-image">
+              <img src="haute.png" alt="">
+            </div>
+            <h2 class="card-label">HAUTE COUTURE</h2>
+          </a>
+
+          <a href="/Page 4/page4.html" class="style-card duplicate" >
+            <div class="card-image">
+              <img src="street.png" alt="">
+            </div>
+            <h2 class="card-label">PARIS STREETWEAR</h2>
+          </a>
+
+          <a href="/Page 5/page5.html" class="style-card duplicate" >
+            <div class="card-image">
+              <img src="bohemian.png" alt="">
+            </div>
+            <h2 class="card-label">BOHEMIAN PARIS STYLE</h2>
+          </a>
+
+        </main>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  ...
+</div>
+
+<!-- ini script biar bisa auto scroll on top, dan auto gulir slide gambarnya  -->
+<script src="script2.js"></script>
+
+</body>
+</html>
 </body>
 </html>

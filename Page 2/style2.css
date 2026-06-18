@@ -1,155 +1,325 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  font-family: serif;
+ *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.page-container {
+body{
+  font-family:Arial, sans-serif;
+  background:black;
+}
+/* =========================
+   ini   DROPDOWN
+========================= */
+.filter-container{
+  display:none;
+}
+
+
+/* =========================
+   ini   NAVBAR
+========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  top: 0;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  overflow: hidden;
-}
-
-.header {
+  z-index: 100;
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
-}
-
-.header-intro-text {
-  text-align: right;
-  font-family: sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  color: #333;
-  max-width: 300px;
-  align-self: flex-end;
-  margin-bottom: 20px;
-}
-
-.header-title {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.gallery-container {
-  display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  overflow-x: auto;
-  padding: 30px 20px;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  padding: 20px 40px;
+  background-color: black;
+  opacity: 70%;
+  color: #f1f1f1;
 }
 
-.slider-wrapper {
-  width: 100%;
-  overflow: hidden;
-}
-
-.gallery-container {
+.nav {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  width: max-content;
-  animation: slide 25s linear infinite;
+  gap: 20px;
+  margin-right: 60px;
 }
 
-.style-card {
-  transition: all 0.5s ease;
-  opacity: 1;
-  transform: scale(0.8);
-}
-
-.style-card.active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.gallery-container:hover {
-  animation-play-state: paused;
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.style-card {
+.nav a {
   text-decoration: none;
-  color: inherit;
+  color: white;
 }
 
-.gallery-container::-webkit-scrollbar {
-  height: 8px;
-}
-.gallery-container::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-.gallery-container::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 10px;
-}
-.gallery-container::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+.nav a:hover {
+  color: rgb(197, 196, 196);
+  text-decoration: underline;
 }
 
-.style-card {
-  flex: 0 0 320px;
-  background-color: #f0f0f0;
-  padding: 20px;
-  border: 10px solid #d9d9d9;
-  border-radius: 4px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  cursor: pointer;
-
-  transition:
-    transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-    box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  will-change: transform, box-shadow;
-}
-
-.style-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.25);
-}
-
-.card-image {
-  width: 100%;
-  aspect-ratio: 1 / 1.1;
-  background-color: #cccccc;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #666;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  padding: 10px;
-  overflow: hidden;
-}
-
-.card-label {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
+.logo {
   text-transform: uppercase;
-  margin: 0;
-  font-family: serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo a:hover {
+  color: white;
+}
+
+/* =========================
+   ini TOMBOLSCROLL KE ATAS
+========================= */
+
+#backToTop{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+
+#backToTop.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+#backToTop:hover{
+    transform: translateY(-5px);
+    background: rgba(0, 0, 0, 0.95);
+}
+
+/* =========================
+   Ini TAMPILAN MOBILE
+========================= */
+@media screen and (max-width:768px){
+
+    #backToTop{
+        width: 45px;
+        height: 45px;
+
+        bottom: 20px;
+        right: 20px;
+
+        font-size: 20px;
+    }
+
+}
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  position:relative;
+  width:100%;
+}
+
+.gambar{
+  width:100%;
+  display:block;
+}
+
+/* =========================
+   CARD SECTION
+========================= */
+
+.page-container{
+  position:absolute;
+
+  /* UBAH ANGKA INI */
+  top:100px;
+
+  left:50%;
+  transform:translateX(-50%);
+
+  width:100%;
+  max-width:1400px;
+
+  padding:40px 20px;
+}
+
+.header{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.header-intro-text{
+  color:black;
+  max-width:500px;
+  text-align: right;
+  margin:0 auto 20px;
+  margin-left: 1100px;
+  
+}
+
+.header-title{
+  color:black;
+  font-size:3rem;
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+.slider-wrapper{
+  width:100%;
+  overflow:hidden;
+}
+
+.gallery-container{
+  display:flex;
+  gap:30px;
+
+  width:max-content;
+
+  animation:slide 25s linear infinite;
+}
+
+.gallery-container:hover{
+  animation-play-state:paused;
+}
+
+@keyframes slide{
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+/* =========================
+   CARD
+========================= */
+
+.style-card{
+  flex:0 0 320px;
+
+  text-decoration:none;
+  color:inherit;
+
+  background:#f0f0f0;
+  border:10px solid #d9d9d9;
+
+  padding:20px;
+
+  box-shadow:0 8px 16px rgba(0,0,0,.2);
+
+  transition:.3s;
+}
+
+.style-card:hover{
+  transform:translateY(-10px);
+}
+
+.card-image{
+  width:100%;
+  margin-bottom:15px;
+  overflow:hidden;
+}
+
+.card-image img{
+  width:100%;
+  display:block;
+}
+
+.card-label{
+  text-align:center;
+  font-family:serif;
+  font-size:1.1rem;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .navbar{
+    padding:15px 20px;
+  }
+
+/* Drop Down */
+
+  .filter-container{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+  }
+
+  #styleFilter{
+    width: 90%;
+    max-width: 350px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    }
+
+
+/* Duplicate Card */
+.duplicate {
+    display: none;
+}
+/*  */
+  .logo{
+    font-size:1rem;
+  }
+
+  .nav{
+    gap:12px;
+  }
+
+  .nav a{
+    font-size:.9rem;
+  }
+
+  .page-container{
+    top:100px; /* sesuaikan */
+    padding:20px;
+  }
+
+  .header-intro-text{
+    color:black;
+    max-width:500px;
+    margin:0 auto 20px;
+    text-align: center;
+    
+  
+}
+
+  .header-title{
+    font-size:2rem;
+  }
+
+  .gallery-container{
+    animation:none;
+
+    flex-direction:column;
+    width:100%;
+
+    align-items:center;
+  }
+
+  .style-card{
+    width:60%;
+    max-width:350px;
+  }
 }
