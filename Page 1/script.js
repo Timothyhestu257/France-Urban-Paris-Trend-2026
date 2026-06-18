@@ -47,7 +47,7 @@ const authContainer = document.getElementById('auth-container');
                         <input class="password" type="password"><br>
                 </div>
 
-                <a href="/Page 2/page2.html" class="explore-btn">Log In</a>
+                <a href="../Page 2/page2.html" class="explore-btn">Log In</a>
                 <p>don't have an account yet?</p>
                 <a href="#" class="explore-btn2"  onclick="event.preventDefault(); renderRegisterForm();">Create Account</a>
             </div>
