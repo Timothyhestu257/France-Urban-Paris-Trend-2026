@@ -15,6 +15,7 @@ dropdown.addEventListener("change", function() {
 
 });
 
+//ini fungsinya untuk scroll ke atas
 const backToTop = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {

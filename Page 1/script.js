@@ -1,8 +1,8 @@
-const authContainer = document.getElementById('auth-container');
+const authContainer = document.getElementById("auth-container");
 
 // fungsi untuk merender form pendaftaran akun saat tombol create account di pencet
-    function renderRegisterForm() {
-        const registerHTML = `
+function renderRegisterForm() {
+  const registerHTML = `
             <div id="div-register" class="form-container">
 
                 <div class="input">
@@ -29,22 +29,22 @@ const authContainer = document.getElementById('auth-container');
 
             </div>
         `;
-        
-        authContainer.innerHTML = registerHTML;
-    }
+
+  authContainer.innerHTML = registerHTML;
+}
 
 // fungsi untuk merender login form saat tombol back di pencet
-    function renderLoginForm() {
-        const loginHTML = `
+function renderLoginForm() {
+  const loginHTML = `
             <div id="div-login" class="form-container">
                 <div class="input">
                     <h2>LogIn</h2>
 
                     <label class="lab-email" for="">Email:</label>
-                        <input class="email"  type="text"><br>
+                        <input id="email" class="email"  type="text"><br>
 
                     <label class="lab-password" for="">Password:</label>
-                        <input class="password" type="password"><br>
+                        <input id="password" class="password" type="password"><br>
                 </div>
 
                 <a href="../Page 2/page2.html" class="explore-btn">Log In</a>
@@ -52,6 +52,22 @@ const authContainer = document.getElementById('auth-container');
                 <a href="#" class="explore-btn2"  onclick="event.preventDefault(); renderRegisterForm();">Create Account</a>
             </div>
         `;
-        
-        authContainer.innerHTML = loginHTML;
-    }
+
+  authContainer.innerHTML = loginHTML;
+}
+
+const USER = "admin@gmail.com";
+const PASSWORD = "123456789";
+
+// LOGIN
+function login() {
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  if (email === USER && password === PASSWORD) {
+    alert("Login Berhasil!");
+    window.location.href = "../Page 2/page2.html";
+  } else {
+    alert("Email atau Password Salah!");
+  }
+}

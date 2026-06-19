@@ -235,6 +235,17 @@ body{
 }
 
 /* =========================
+   di bawah CARD
+========================= */
+.Fashion {
+  display: flex;
+  font-size: xx-large;
+  justify-content: space-between;
+}
+
+
+
+/* =========================
    MOBILE
 ========================= */
 
@@ -244,7 +255,6 @@ body{
     padding:15px 20px;
   }
 
-/* Drop Down */
 
   .filter-container{
       display: flex;
@@ -288,8 +298,6 @@ body{
     max-width:500px;
     margin:0 auto 20px;
     text-align: center;
-    
-  
 }
 
   .header-title{
